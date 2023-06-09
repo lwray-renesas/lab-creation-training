@@ -3,7 +3,7 @@
  **************************************************************************/
 
 /* TODO: populate - The title of the lab*/
-const lab_title = "Practical Training Template";
+const lab_title = "Lab Creation Training";
 
 /* TODO: populate -
 * array of string representing lab pages used to populate side navigation bar.
@@ -13,9 +13,10 @@ const lab_title = "Practical Training Template";
 */
 const pages_in_lab = [
     "index.html", "Home",
-    "1-First-Page.html", "1. First Page",
-    "2-Middle-Page.html", "2. Middle Page",
-    "3-Last-Page.html", "3. Last Page"];
+    "1-Necessary-Edits.html", "1. Necessary Edits",
+    "2-Usage-Guidelines.html", "2. Usage Guidelines",
+    "3-Deployment.html", "3. Deployment"
+];
 
 /** Class for fulfilling the templating requirements of lab creation */
 class Lab_templater {

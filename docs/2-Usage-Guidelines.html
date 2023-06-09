@@ -6,11 +6,16 @@
 	<!-- Useful for tablet and mobile based browsing-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Title of the page (not necessarily the lab) - for reference only, not displayed on the page-->
-	<title>First Page</title>
+	<title>Usage Guidelines</title>
 	<!-- CSS template stylesheet must be linked here-->
 	<link href="css/renesas_layout_style.css" rel="stylesheet" type="text/css">
 	<!-- Javascript based lab templating helper must be placed here-->
 	<script type="text/javascript" src="js/lab-templater.js"></script>
+
+	<!-- Addition of code highlighting Stylesheet & Script-->
+	<link rel="stylesheet" href="js/highlight/styles/atom-one-light.min.css">
+	<script type="text/javascript" src="js/highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -21,25 +26,48 @@
 	<div class="main-content">
 
 		<!-- Page/Section Summary & Description-->
-		<summary>1. First Section</summary>
-		<p>Here we briefly describe the contents of this section of the lab.</p>
+		<summary>2. Usage Guidelines</summary>
+		<p>This section will outline how to best use the lab template and how to develop further the template.</p>
 
 		<!-- Start adding "details" sections for lab steps-->
 		<details open>
-			<summary>1.1 First Step</summary>
-			<p>The first step is defaulted to open.</p>
+			<summary>2.1 Steps</summary>
+			<p>TODO</p>
 		</details>
 
 		<details>
-			<summary>1.2 Second Step</summary>
-			<p>Subsequent steps are defaulted to closed.</p>
+			<summary>2.2 Text</summary>
+			<p>TODO</p>
+		</details>
+
+		<details>
+			<summary>2.3 Images</summary>
+			<p>TODO</p>
+		</details>
+
+		<details>
+			<summary>2.4 Code Snippets</summary>
+			<p>TODO</p>
+		</details>
+
+		<details>
+			<summary>2.5 Style</summary>
+			<p>TODO - TEMPLATING!!!</p>
+		</details>
+
+		<details>
+			<summary>2.6 Bug fixes & Improvements</summary>
+			<p>TODO</p>
 		</details>
 
 		<!-- Prepare the pages modal images-->
 		<script>lab_templater.Prepare_modal();</script>
 
 		<!-- Button for going to the next page-->
-		<script>lab_templater.Generate_next_page_button("Next...");</script>
+		<script>lab_templater.Generate_next_page_button("Finished!");</script>
+
+		<!-- Setup code copying functionality on all appropriately formatted code snippets-->
+		<script>Setup_code_copy();</script>
 	</div>
 </body>
 
