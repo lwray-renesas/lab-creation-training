@@ -3,7 +3,7 @@
  **************************************************************************/
 
 /* TODO: populate - The title of the lab*/
-const lab_title = "RL78/G23 IAQ Promotion Board Series - Low Power";
+const lab_title = "Practical Training Template";
 
 /* TODO: populate -
 * array of string representing lab pages used to populate side navigation bar.
@@ -13,10 +13,9 @@ const lab_title = "RL78/G23 IAQ Promotion Board Series - Low Power";
 */
 const pages_in_lab = [
     "index.html", "Home",
-    "1-Project-Creation.html", "1. Project Creation",
-    "2-Configuration.html", "2. Project Configuration",
-    "3-Source-Code.html", "3. Source Code",
-    "4-Build-And-Debug.html", "4. Build &amp; Debug"];
+    "1-First-Page.html", "1. First Page",
+    "2-Middle-Page.html", "2. Middle Page",
+    "3-Last-Page.html", "3. Last Page"];
 
 /** Class for fulfilling the templating requirements of lab creation */
 class Lab_templater {
