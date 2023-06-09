@@ -27,17 +27,63 @@
 
 		<!-- Page/Section Summary & Description-->
 		<summary>1. Necessary Edits</summary>
-		<p>Here we briefly describe the contents of this section of the lab.</p>
+		<p>Here we briefly describe the necessary process of editting the files in the template.</p>
 
 		<!-- Start adding "details" sections for lab steps-->
 		<details open>
 			<summary>1.1 Edits applicable to js/lab-templater.js</summary>
-			<p>The first step is defaulted to open.</p>
+			<p>The lab template is powered by both CSS and JS - though automation is placed where possible, some manual edits are required.
+				The most important ones are the "title" and "page list" strings in the js/lab-templater.js file.<br>
+				When creating a lab, each section is split into a seperate HTML page. To perform automatic generation of the side navigation
+				menu you must list the file names and corresponding page titles in the js/lab-templater.js file.<br>
+				Each array entry comes in pairs, 0-1, 2-3, 4-5 ... and so on. The first entry is the file name, the second is the arbitrary
+				title to be displayed in the navigation menu. Below is an example of populating this:
+			</p>
+			<img class="modal-thumbnails" src="img/img_lab/doc_list.png" alt="">
+			<p>Note how on the last entry there is <b>no comma</b>.<br>
+			Finally fill in the title of the lab, like so:</p>
+			<img class="modal-thumbnails" src="img/img_lab/lab_title.png" alt="">
 		</details>
 
 		<details>
 			<summary>1.2 Edits Applicable to all HTML</summary>
-			<p>Subsequent steps are defaulted to closed.</p>
+			<p>Each HTML page should be given a title also which is near the top of the files in the template, like so:</p>
+			<img class="modal-thumbnails" src="img/img_lab/page_title.png" alt="">
+		</details>
+
+		<details>
+			<summary>1.3 Do Not Touch</summary>
+			<p>Each HTML page contains header and footer data which forms part of the automation of the templating.<br>
+				Below I will list the lines and their function, so the author can determine whether they are needed or not.
+			</p>
+			<ul>
+				<li><pre class="no-copy"><code class="HTML">&lt;meta charset="utf-8"&gt;</code></pre>
+				Specifies character encoding.</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+				Supports different viewports.</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;link href="css/renesas_layout_style.css" rel="stylesheet" type="text/css"&gt;</code></pre>
+				Specifies the CSS template to use.</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;script type="text/javascript" src="js/lab-templater.js"&gt;&lt;/script&gt;</code></pre>
+				Specifies the JS templating script to use.</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;link rel="stylesheet" href="js/highlight/styles/atom-one-light.min.css"&gt;</code></pre>
+				Specifies the syntax highlighting stylesheet for code snippets.</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;script type="text/javascript" src="js/highlight/highlight.min.js"&gt;&lt;/script&gt;</code></pre>
+				Specifies the syntax highlighting javascript for code snippets.</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;script&gt;hljs.highlightAll();&lt;/script&gt;</code></pre>
+				Function to scan document and perform syntax highlighting where applicable.</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;script&gt;lab_templater.Generate_header();&lt;/script&gt;</code></pre>
+				Function to generate templated banner (with side navigation menu).</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;script&gt;lab_templater.Prepare_modal();&lt;/script&gt;</code></pre>
+				Calls the templater function to scan the document and apply the modal thumbnails class to specified images.</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;script&gt;lab_templater.Generate_next_page_button("Next...");&lt;/script&gt;</code></pre>
+				Calls the templater function to generate the next page button with button text specified in argument.</li>
+				<li><pre class="no-copy"><code class="HTML">&lt;script&gt;Setup_code_copy();&lt;/script&gt;</code></pre>
+				Calls the templater function to enable and place code copying buttons in code snippets where applicable.</li>
+			</ul>
+
+			<p>These are at the top and bottom of the document respectively:</p>
+			<img class="modal-thumbnails" src="img/img_lab/page_top.png" alt=""><br>
+			<img class="modal-thumbnails" src="img/img_lab/page_bottom.png" alt="">
 		</details>
 
 		<!-- Prepare the pages modal images-->
